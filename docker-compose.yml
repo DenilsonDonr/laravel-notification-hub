@@ -29,6 +29,16 @@ services:
     depends_on:
       - app
 
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: event-driven-notifications-mailpit
+    restart: unless-stopped
+    ports:
+      - "1025:1025"  # SMTP — donde Laravel envía los emails
+      - "8025:8025"  # UI web — donde tú los ves
+    networks:
+      - event-driven-notifications
+
   postgres:
     image: postgres:16-alpine
     container_name: event-driven-notifications-postgres
