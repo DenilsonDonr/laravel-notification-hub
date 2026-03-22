@@ -13,7 +13,7 @@ use Illuminate\Queue\InteractsWithQueue;
 #[Queue('notifications')] // This listener will be placed on the 'notifications' queue.
 #[Tries(3)] // This listener will be attempted a maximum of 3 times before it fails permanently.
 #[Backoff(10)] // If the listener fails, it will wait 10 seconds before trying again.
-class SendWelcomeEmail
+class SendWelcomeEmail implements ShouldQueue
 {
     /**
      * Create the event listener.
