@@ -147,6 +147,22 @@ php artisan test
 
 ---
 
+## Screenshots
+
+### Running the notifications queue worker
+
+![Queue notifications worker](docs/screenshots/queue-notifications.png)
+
+### Emails captured in Mailpit
+
+![Mailpit inbox](docs/screenshots/mailpit.png)
+
+### Welcome email body
+
+![Mailpit email body](docs/screenshots/mailpit-body.png)
+
+---
+
 ## Patterns and principles
 
 ### Design Pattern
